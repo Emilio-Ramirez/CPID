@@ -1,0 +1,32 @@
+[2025-06-11 15:25:54,115] [INFO] === INICIANDO VALIDACIONES ===
+[2025-06-11 15:25:54,116] [INFO] ✓ Estructura de BD completa
+[2025-06-11 15:25:54,117] [INFO] ✓ Sin venta_id duplicados
+[2025-06-11 15:25:54,117] [WARNING] 706 ventas con cantidad = 0 (posibles devoluciones)
+[2025-06-11 15:25:54,118] [ERROR] 491 ventas con producto_id inválido - IDs no encontrados: [11]
+[2025-06-11 15:25:54,118] [INFO] ✓ Todos los precios son válidos
+[2025-06-11 15:25:54,118] [INFO] ✓ Todos los cliente_id son válidos
+[2025-06-11 15:25:54,118] [WARNING] 1479 ventas con fechas futuras - Revisar si son válidas
+[2025-06-11 15:25:54,119] [INFO] ✓ Sin stock negativo
+[2025-06-11 15:25:54,119] [INFO] === RESUMEN DE VALIDACIONES ===
+[2025-06-11 15:25:54,119] [INFO] Total alertas: 8
+[2025-06-11 15:25:54,119] [INFO] INFO: 5
+[2025-06-11 15:25:54,119] [INFO] WARNING: 2
+[2025-06-11 15:25:54,119] [INFO] ERROR: 1
+[2025-06-11 15:25:54,119] [INFO] ESTADO: REQUIERE ATENCIÓN ⚠️
+[2025-06-11 15:25:54,119] [INFO] === VALIDACIONES COMPLETADAS ===
+[2025-06-11 15:29:03,548] [INFO] === INICIANDO VALIDACIONES ===
+[2025-06-11 15:29:03,550] [INFO] ✓ Estructura de BD completa
+[2025-06-11 15:29:03,553] [INFO] ✓ Sin venta_id duplicados
+[2025-06-11 15:29:03,554] [WARNING] 706 ventas con cantidad = 0 (posibles devoluciones)
+[2025-06-11 15:29:03,556] [ERROR] 491 ventas con producto_id inválido - IDs no encontrados: [11]
+[2025-06-11 15:29:03,556] [INFO] ✓ Todos los precios son válidos
+[2025-06-11 15:29:03,556] [INFO] ✓ Todos los cliente_id son válidos
+[2025-06-11 15:29:03,556] [WARNING] 1479 ventas con fechas futuras (hoy: 2025-06-11) - Revisar si son válidas
+[2025-06-11 15:29:03,557] [INFO] ✓ Sin stock negativo
+[2025-06-11 15:29:03,557] [INFO] === RESUMEN DE VALIDACIONES ===
+[2025-06-11 15:29:03,557] [INFO] Total alertas: 8
+[2025-06-11 15:29:03,557] [INFO] INFO: 5
+[2025-06-11 15:29:03,557] [INFO] WARNING: 2
+[2025-06-11 15:29:03,557] [INFO] ERROR: 1
+[2025-06-11 15:29:03,557] [INFO] ESTADO: REQUIERE ATENCIÓN ⚠️
+[2025-06-11 15:29:03,557] [INFO] === VALIDACIONES COMPLETADAS ===
