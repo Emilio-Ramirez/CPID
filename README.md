@@ -111,3 +111,80 @@ python scripts/api.py
 
 **Estado del sistema:** REQUIERE ATENCIÓN ⚠️ (fechas futuras y producto_id=11 faltante)
 
+### Tarea 4: Carga AWS S3 (OPCIONAL)
+
+```bash
+python scripts/aws_upload.py
+```
+
+**Configuración:**
+
+- Variables de entorno en `.env`
+- Usuario IAM: `CSV_Uploader` con permisos de escritura
+
+**Consideraciones de Producción:**
+
+### 1. Seguridad de Credenciales
+
+**IAM Roles vs Access Keys:**
+
+- **Producción:** IAM Roles (temporales, rotación automática)
+- **Desarrollo:** Access Keys en variables de entorno
+- **Gestión:** AWS Secrets Manager + rotación automática
+- **Principio:** Menor privilegio (solo permisos necesarios)
+
+### 2. Automatización Diaria
+
+**Opción A - Serverless:**
+
+- Lambda función + EventBridge (cron schedule)
+- Sin gestión de infraestructura
+- Escalable y costo-efectivo
+
+**Opción B - Contenedores:**
+
+- ECS/Fargate + EventBridge
+- Mayor control del entorno
+- Para procesos complejos
+
+### 3. Manejo Robusto de Errores
+
+- **Reintentos:** Exponential backoff
+- **Monitoreo:** CloudWatch + SNS alertas
+- **Logs:** Structured logging con contexto
+- **Dead Letter Queue:** Para fallos persistentes
+
+### 4. Archivos Grandes (>5GB)
+
+- **Multipart upload:** Paralelo, recuperable
+- **Streaming:** Procesar sin cargar en memoria
+- **Compresión:** Parquet/gzip para eficiencia
+- **Transfer Acceleration:** ones:\*\* ACID compliance
+- **Orquestadores:** Airflow, Prefect con manejo nativo de concurrencia
+- **Servicios de cola:** SQS/RabbitMQ para serialización
+
+### Tarea 5: Monitoreo y Bloqueo
+
+```bash
+python scripts/validar_y_enviar.py
+```
+
+**Funcionalidades:**
+
+- ✅ Bloqueo atómico con `os.O_EXCL`
+- ✅ Verificación de existencia de archivo
+- ✅ Validación de frescura (modificado hoy)
+- ✅ Limpieza garantizada con `finally`
+
+**Limitaciones del bloqueo actual:**
+
+- **Proceso zombie:** Lock persiste si el proceso muere abruptamente
+- **Sin timeout:** No hay expiración automática del lock
+- **Monousuario:** Solo funciona en una máquina
+
+**Alternativas para producción:**
+
+- **Redis locks:** Distribuidos con TTL automático
+- **DB transacciones:** ACID compliance
+- **Orquestadores:** Airflow, Prefect con manejo nativo de concurrencia
+- **Servicios de cola:** SQS/RabbitMQ para serialización
