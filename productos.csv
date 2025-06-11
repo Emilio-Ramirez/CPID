@@ -1,0 +1,11 @@
+producto_id,nombre_producto,categoria,precio_unitario
+Prod001,Laptop Modelo X,Electronicos,25000.5
+prod002,Teclado Inalambrico,Accesorios,800.0
+prod_003,Monitor 24 pulgadas,Electronicos,4500.75
+PROD004,Mouse Optico,Accesorios,350.0
+prod_005,Camisa de Algodon,Ropa,600.0
+P-006,Pantalon Mezclilla,Ropa,950.0
+prod_007,Hub USB-C,Accesorios,750.2
+P-008,Webcam HD,Electronicos,1200.0
+PROD009,Sudadera con Capucha,Ropa,1100.0
+PROD010,SSD Externo 1TB,Almacenamiento,2100.0

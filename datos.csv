@@ -1,0 +1,21 @@
+cliente_id,nombre,edad,ciudad
+CLIENTE - 01,Jorge,44,Guadalajara
+CLIENTE - 02,Andrea,59,Guadalajara
+CLIENTE - 03,José,33,Guadalajara
+CLIENTE - 04,Sofía,32,Querétaro
+CLIENTE - 05,Jorge,64,Guadalajara
+CLIENTE - 06,Arturo,68,Puebla
+CLIENTE - 07,José,61,Puebla
+CLIENTE - 08,José,69,Puebla
+CLIENTE - 09,Mónica,20,Puebla
+CLIENTE - 10,Sofía,54,Querétaro
+CLIENTE - 11,Carlos,68,Monterrey
+CLIENTE - 12,Ana,24,Toluca
+CLIENTE - 13,Laura,38,CDMX
+CLIENTE - 14,Lucía,26,Puebla
+CLIENTE - 15,Ana,56,Guadalajara
+CLIENTE - 16,Luis,35,Puebla
+CLIENTE - 17,Laura,21,Guadalajara
+CLIENTE - 18,Laura,42,Toluca
+CLIENTE - 19,Diego,31,Toluca
+CLIENTE - 20,Laura,38,CDMX
